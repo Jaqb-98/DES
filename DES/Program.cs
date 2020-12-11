@@ -17,20 +17,25 @@ namespace DEScipher
 
             Console.Write("Text: ");
             string sData = Console.ReadLine();
+            byte[] IV = { 10, 20, 30, 40, 50, 60, 70, 80 };
 
 
-            var key = DESalg.Key;
-            Console.WriteLine("Key Byte Array: " + String.Join(" ", key));
-            string keystr = Encoding.Default.GetString(key);
-            Console.WriteLine("Key to string: " + keystr);
+            string keyString;
+            byte[] key;
+            do
+            {
+                Console.Write("Key (8 chars): ");
+                keyString = Console.ReadLine();
+                key = Encoding.Default.GetBytes(keyString);
+            } while (keyString.Length != 8);
 
-            byte[] Data = Encrypt(sData, DESalg.Key, DESalg.IV);
+            byte[] Data = Encrypt(sData, key, IV);
 
             var encoded = Encoding.Default.GetString(Data);
             Console.WriteLine("Encrypted: " + encoded);
 
 
-            string Final = Decrypt(Data, DESalg.Key, DESalg.IV);
+            string Final = Decrypt(Data, key, IV);
             Console.WriteLine("Decrypted: " + Final);
 
             Console.ReadKey();
@@ -41,13 +46,9 @@ namespace DEScipher
         {
 
             MemoryStream mStream = new MemoryStream();
-
-
             DES DESalg = DES.Create();
 
-
             CryptoStream cStream = new CryptoStream(mStream, DESalg.CreateEncryptor(Key, IV), CryptoStreamMode.Write);
-
 
             byte[] toEncrypt = new ASCIIEncoding().GetBytes(Data);
 
