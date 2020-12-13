@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEScipher", "DES\DEScipher.csproj", "{24C544A5-9365-4AEB-B444-2C776747F0F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DES2", "DES2\DES2.csproj", "{A6E16DDE-9C59-44C5-ACAB-BB6FF5029EA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{24C544A5-9365-4AEB-B444-2C776747F0F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24C544A5-9365-4AEB-B444-2C776747F0F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24C544A5-9365-4AEB-B444-2C776747F0F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24C544A5-9365-4AEB-B444-2C776747F0F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6E16DDE-9C59-44C5-ACAB-BB6FF5029EA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6E16DDE-9C59-44C5-ACAB-BB6FF5029EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6E16DDE-9C59-44C5-ACAB-BB6FF5029EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E16DDE-9C59-44C5-ACAB-BB6FF5029EA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
